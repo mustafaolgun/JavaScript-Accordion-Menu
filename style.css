@@ -1,0 +1,23 @@
+h3 {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+h3::after {
+  content: " + ";
+}
+
+p {
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.content.active p {
+  height: 100px;
+}
+
+.content.active h3::after {
+  content: " - ";
+  transition: 0.5s;
+}
